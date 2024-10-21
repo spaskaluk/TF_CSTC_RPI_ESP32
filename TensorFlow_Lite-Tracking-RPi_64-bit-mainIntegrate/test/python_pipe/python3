@@ -1,0 +1,23 @@
+import time
+import sys
+i = 0
+
+while (True):
+	print(f"{i} iterations complete", file=sys.stdout)
+	time.sleep(1)
+	i+=1
+import sys
+import fileinput
+
+
+for line in fileinput.input():
+    print(line)
+quit()
+
+try:
+	for line in iter(sys.stdin.readline, b''):
+		print(line)
+except KeyboardInterrupt:
+	sys.stdout.flush()
+	pass
+
